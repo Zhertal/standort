@@ -3,26 +3,26 @@ include 'db.php';
 
 if (isset($_POST['registrarse'])) {
         if (!isset($_POST['usuario']) || !isset($_POST['correo']) || !isset($_POST['pass']))
-            exit(header("location: ../views/registro.php?e=1"));
+            exit(header("location: ../views/registro.html?e=1"));
         
         $usuario = $_POST['usuario'];
         $correo = $_POST['correo'];
         $pass = $_POST['pass'];
 
         if (!$usuario || !$correo || !$pass)
-            exit(header("location: ../views/registro.php?e=1"));
+            exit(header("location: ../views/registro.html?e=1"));
         
         insert($usuario, $correo, $pass);
     }
 
 function insert($u, $co, $c) {
     if (userExist($u, $co))
-        exit(header("location: ../views/registro.php?e=2"));
+        exit(header("location: ../views/registro.html?e=2"));
 
     $c = md5($c);//Encriptar
     $query = "INSERT INTO usuario (correo, password, nombreUsuario) values('{$co}','{$c}','{$u}')";
     $resultado = consulta($query);
-    exit(header("location: ../views/index.php"));
+    exit(header("location: ../views/index.html"));
 }
 
 function userExist($u,$co){

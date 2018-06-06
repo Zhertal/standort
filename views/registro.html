@@ -1,16 +1,13 @@
-<?php
-include '../php/constantes.php';
-?>
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="<?=CSS;?>/index.css">
-    <script src="<?=JS;?>/registro.js"></script>
+    <link rel="stylesheet" type="text/css" href="../public/css/index.css">
+    <script src="../public/js/registro.js"></script>
 	<title>Standort</title>
     <meta charset="utf-8">
 </head>
 <body>
-    <form enctype="multipart/form-data" method="POST" action="../php/registro.php" onsubmit="return validar()">
+    <form enctype="multipart/form-data" method="POST" action="../php/registro.html" onsubmit="return validar()">
         <div>
             <div>
                 <label>Usuario</label><br>
@@ -35,8 +32,7 @@ include '../php/constantes.php';
         </div>
     </form>
     <div>
-        <p><a href="index.php">Iniciar sesión</a></p>
+        <p><a href="index.html">Iniciar sesión</a></p>
     </div>
 </body>
 </html>
-<?php include '../php/error.php'; ?>

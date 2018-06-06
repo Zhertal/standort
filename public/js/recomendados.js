@@ -4,5 +4,5 @@ function cambio(page){
 
 function cambioB(id){
 	localStorage.setItem("opciones", id);
-	location.href = "recomendados2.php";
+	location.href = "recomendados2.html";
 }

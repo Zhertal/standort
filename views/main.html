@@ -1,33 +1,32 @@
-<?php include '../php/constantes.php'; ?>
 <!DOCTYPE html>
 <html>
 <head>
 	<title>TurismoQro</title>
 	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="<?=CSS;?>/index.css">
-	<script src="<?=JS?>/index.js"></script>
+	<link rel="stylesheet" type="text/css" href="../public/css/index.css">
+	<script src="../public/js/index.js"></script>
 	<meta name="viewport">
 </head>
 <body>
 	<div class="contenedor">
-		<img src="<?=IMG;?>/fondo2.jpg" class="fondo">
+		<img src="../public/img/fondo2.jpg" class="fondo">
 		<div class="fondo2"></div>
 
 		<nav>
-			<img src="<?=IMG;?>/user.png" alt="" onclick="alerta()">
+			<img src="../public/img/user.png" alt="" onclick="alerta()">
 			<h2>Imagen y nombre de usuario</h2>
 		</nav>
 
 		<div class="izq">
-			<div class="cont-izq" onclick="cambio('buscar.php')">
+			<div class="cont-izq" onclick="cambio('buscar.html')">
 				<h1>Buscar</h1>
 			</div>
-			<div class="cont-izq" onclick="cambio('recomendados.php')">
+			<div class="cont-izq" onclick="cambio('recomendados.html')">
 				<h1>Recomendados</h1>
 			</div>
 		</div>
 		<div class="der">
-			<div class="cont-der" onclick="cambio('favoritos.php')">
+			<div class="cont-der" onclick="cambio('favoritos.html')">
 				<h1>Favoritos</h1>
 			</div>
 			<div class="cont-der">
