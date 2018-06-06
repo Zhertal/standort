@@ -3,8 +3,9 @@ include '../php/constantes.php';
 ?>
 <!DOCTYPE html>
 <html>
-<link rel="stylesheet" type="text/css" href="<?=CSS;?>/index.css">
 <head>
+    <link rel="stylesheet" type="text/css" href="<?=CSS;?>/index.css">
+    <script type="text/javascript" src="../public/js/registro.js"></script>
 	<title>Standort</title>
 </head>
 <body>
