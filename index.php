@@ -1,1 +1,0 @@
-<?php exit(header('location: views')); ?>
