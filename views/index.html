@@ -1,14 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="../public/css/index.css">
+    <link rel="stylesheet" type="text/css" href="../public/css/login.css">
     <script type="text/javascript" src="../public/js/registro.js"></script>
 	<title>Standort</title>
     <meta charset="utf-8">
 </head>
 <body>
-    <form method="POST" action="../php/login.php">
-        <p>Por favor logueate para acceder</p>
+
+    <img src="../public/img/fondo2.jpg" class="fondo">
+    <div class="fondo2"></div>
+
+    <nav>
+        <img src="../public/img/user.png" alt="">
+    </nav>
+
+    <div class="formulario">
+        <form method="POST" action="../php/login.php">
+        <h2>Por favor logueate para acceder</h2><br><br>
         <div>
             <label>Nombre de Usuario o correo</label><br>
             <div><input name="usuario" type="text" placeholder="Usuario" autofocus="" required></div>
@@ -24,6 +33,7 @@
     </form>
     <div>
         <p><a href="registro.html">Registrarte</a></p>
+    </div>
     </div>
 </body>
 </html>
