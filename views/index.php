@@ -5,7 +5,7 @@ include '../php/constantes.php';
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="<?=CSS;?>/index.css">
-    <script type="text/javascript" src="../public/js/registro.js"></script>
+    <script type="text/javascript" src="<?=JS;?>/registro.js"></script>
 	<title>Standort</title>
 </head>
 <body>
@@ -22,7 +22,7 @@ include '../php/constantes.php';
         </div>
 
         <div><button type="submit" name="bandera" value="entrar">Entrar</button></div><br>
-        <p id="error"></p><br>
+        <p id="error"></p>
     </form>
     <div>
         <p><a href="registro.php">Registrarte</a></p>

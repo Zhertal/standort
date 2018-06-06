@@ -28,15 +28,15 @@ include '../php/constantes.php';
                 <label>Confirmar contraseña</label><br>
                 <input name="pass2" id="contraseña2" minlength="8" placeholder="Confirma" type="password"/>
             </div>
-
             <div>
+                <p id="error"></p>
                 <button type="submit" name="registrarse" value="reg">Registrarte</button><br>
-                <a href="index.php">Iniciar sesión</a>
             </div>
         </div>
     </form>
-
-    <p id="error"></p>
+    <div>
+        <p><a href="index.php">Iniciar sesión</a></p>
+    </div>
 </body>
 </html>
 <?php include '../php/error.php'; ?>

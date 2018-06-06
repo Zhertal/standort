@@ -34,7 +34,7 @@ function login($u,$p){
             $_SESSION['id'] = $r['idUsuario'];
             $_SESSION['usuario'] = $r['nombreUsuario'];
         }
-        exit(header("location: ../views/index.php?AhoraEstasLogueado=true"));
+        exit(header("location: ../views/main.php"));
     }
 }
 
