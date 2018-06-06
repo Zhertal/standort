@@ -11,16 +11,16 @@ include '../php/constantes.php';
     <form method="POST" action="../php/login.php">
         <p>Por favor logueate para acceder</p>
         <div>
-            <label>Nombre de Usuario o correo</label>
+            <label>Nombre de Usuario o correo</label><br>
             <div><input name="usuario" type="text" placeholder="Usuario" autofocus="" required></div>
         </div>
 
         <div>
-            <label>Contraseña</label>
+            <label>Contraseña</label><br>
             <div><input name="pass" type="password" placeholder="Contraseña" required></div>
         </div>
 
-        <div><button type="submit" name="bandera" value="entrar">Entrar</button></div>
+        <div><button type="submit" name="bandera" value="entrar">Entrar</button></div><br>
     </form>
     <div>
         <p><a href="registro.php">Registrarte</a></p>
