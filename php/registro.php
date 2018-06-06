@@ -11,16 +11,13 @@ if (isset($_POST['registrarse'])) {
 
         if (!$usuario || !$correo || !$pass)
             exit(header("location: ../views/registro.php?e=1"));
-
-        if(userExist($usuario,$correo))
-            header("location: ../views/registro.php?e=2");
-        else
-            insert($usuario, $correo, $pass);
+        
+        insert($usuario, $correo, $pass);
     }
 
 function insert($u, $co, $c) {
     if (userExist($u, $co))
-        exit("viewModal('El usuario o correo ya estan en uso')");
+        exit(header("location: ../views/registro.php?e=2"));
 
     $c = md5($c);//Encriptar
     $query = "INSERT INTO usuario (correo, password, nombreUsuario) values('{$co}','{$c}','{$u}')";

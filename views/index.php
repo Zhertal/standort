@@ -22,12 +22,11 @@ include '../php/constantes.php';
         </div>
 
         <div><button type="submit" name="bandera" value="entrar">Entrar</button></div><br>
+        <p id="error"></p><br>
     </form>
     <div>
         <p><a href="registro.php">Registrarte</a></p>
     </div>
-
-    <p id="error"></p>
 </body>
 </html>
 <?php include '../php/error.php' ?>

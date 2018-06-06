@@ -16,7 +16,7 @@ if(!$_POST)
 
 
 if (!isset($_POST['usuario']) || !isset($_POST['pass']))
-    exit(header("location: ../views/index.php?e=1"));//Error-----------------------------
+    exit(header("location: ../views/index.php?e=4"));
 
 $usuario = $_POST['usuario'];
 $pass = $_POST['pass'];
@@ -27,7 +27,7 @@ function login($u,$p){
     $query = "SELECT * FROM usuario WHERE nombreUsuario='{$u}' AND password='{$p}' OR correo='{$u}' AND password='{$p}'";
     $resultado = consulta($query);
     if ($resultado->num_rows == 0)
-        exit(header("location: ../views/index.php?e=3"));//Error----------------------------
+        exit(header("location: ../views/index.php?e=5"));
     else {
         session_start();
         while ($r = mysqli_fetch_array($resultado)) {

@@ -3,7 +3,7 @@ if (isset($_GET['e'])){
 	switch ($_GET['e']) {
 		case 1:
 			echo "<script language='javascript' type='text/javascript'>";
-			echo "viewModal()";
+			echo "viewModal('Todos los campos son obligatorios')";
 			echo "</script>";
 			break;
 		case 2:
@@ -18,22 +18,22 @@ if (isset($_GET['e'])){
 			break;
 		case 4:
 			echo "<script language='javascript' type='text/javascript'>";
-			echo "viewModal('La imagen es muy grande no se subio correctamente, Usuario registrado')";
+			echo "viewModal('Todos los campos son obligatorios.')";
 			echo "</script>";
 			break;
 		case 5:
 			echo "<script language='javascript' type='text/javascript'>";
-			echo "viewModal('La imagen debe ser formato: jpg, jpeg, png, gif. Usuario registrado ')";
+			echo "viewModal('Usuario o contraseña incorrectos.')";
 			echo "</script>";
 			break;
 		case 6:
 			echo "<script language='javascript' type='text/javascript'>";
-			echo "viewModal('La imagen no se subio correctamente, Usuario registrado')";
+			echo "viewModal('')";//Numero de error disponible------------------------------------*:)
 			echo "</script>";
 			break;
 		case 7:
 			echo "<script language='javascript' type='text/javascript'>";
-			echo "viewModal('No se selecciono una imagen. Usuario registrado')";
+			echo "viewModal('')";//Numero de error disponible------------------------------------*:)
 			echo "</script>";
 			break;
 		default: break;

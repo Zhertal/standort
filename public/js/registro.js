@@ -14,7 +14,7 @@ function validar() {
     var contraseña2 = document.getElementById("contraseña2").value
 
     //Si alguno de los campos esta vacio  
-    if (usuario == "" || correo == "" || contraseña == "" || contraseña2) {
+    if (usuario == "" || correo == "" || contraseña == "" || contraseña2 == "") {
         viewModal("Todos los campos son obligatorios.");
         return false;
     } else if (contraseña.length < 8) {
@@ -39,7 +39,7 @@ function validar() {
 
 //Manejo de errores
 function viewModal(texto) {
-    if(val == !undefined)
+    if(texto != undefined)
         error.innerHTML = texto;
         error.classList.add("is-active");
         setTimeout(function() {

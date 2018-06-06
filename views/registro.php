@@ -30,7 +30,7 @@ include '../php/constantes.php';
             </div>
 
             <div>
-                <button type="submit" name="registrarse" value="reg">Registrarte</button>
+                <button type="submit" name="registrarse" value="reg">Registrarte</button><br>
                 <a href="index.php">Iniciar sesión</a>
             </div>
         </div>
