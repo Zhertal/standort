@@ -25,6 +25,7 @@ VALUES (
 }
 
 
+
 function insertSitio(){
 $idUser=$_GET['idUsuario'];
 $sitio=$_GET['nombreSitio'];
@@ -50,6 +51,8 @@ VALUES (
 `descripcion`='$descri';");
 }
 
+
+
 function insertComentario(){
 $idUser=$_GET['idUsuario'];
 $idSitio=$_GET['idSitio'];
@@ -71,5 +74,34 @@ VALUES (
 `fecha`='$fecha',
 `kudos`='$kudos';");
 }
+
+
+
+function insertCategoria{
+$cat=$_GET['categoria'];
+
+
+ejecutarSQLCommand("INSERT INTO  `categoria` (categoria)
+VALUES (
+'$cat')
+
+ ON DUPLICATE KEY UPDATE `categoria`= '$cat';");
+}
+
+
+
+function insertSitioCat(){
+    $idSitio=$_GET['idSitio'];
+    $idCat=$_GET['idCategoria'];
+
+ejecutarSQLCommand("INSERT INTO  `sitiocategoria` ( idSitio, idCategoria )
+VALUES (
+'$idSitio',
+'$idCat')
+
+ ON DUPLICATE KEY UPDATE `idSitio`= '$idSitio',
+ `idCategoria`='$idCat';");
+}
+
 
  ?>
