@@ -1,7 +1,6 @@
 <?php 
 include('db.php');
 
-
 $usuario = $_GET['usuario'];
 $pass = $_GET['pass'];
 
