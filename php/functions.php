@@ -29,7 +29,7 @@ $mysqli->close();
 }
 
 function getSQLResultSet($commando){
-<<<<<<< HEAD
+<<<<<< HEAD
   $mysqli = new mysqli("localhost", "root", "vpcek20al", "androidsitio");
 =======
   $mysqli = new mysqli("localhost", "root", "vpcek20al", "standort");

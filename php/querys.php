@@ -19,7 +19,7 @@ elseif ($function=="5") {
 	insertSitioCat();
 }
 
-function insertUser(){
+/*function insertUser(){
 $email=$_GET['correo'];
 $pass=$_GET['password'];
 $nombre=$_GET['nombreUsuario'];
@@ -39,7 +39,7 @@ VALUES (
 `nombreUsuario`='$nombre',
 `kudos`='$kudos',
 `fechaRegistro`='$fecha';");
-}
+}*/
 
 
 

@@ -54,9 +54,10 @@ function registrar(){
     var usr = document.getElementById('usuario').value;
     var mail = document.getElementById('correo').value;
     var contra = document.getElementById('contraseña').value;
+    var fecha = Date.now();
 
     ajax = new XMLHttpRequest();
-    ajax.open('GET', 'http://localhost/standort/php/registro.php?usr='+usr+"&mail="+mail+"$pass="+contra);
+    ajax.open('GET', 'http://localhost/standort/php/registro.php?usr='+usr+"&correo="+mail+"$pass="+contra+"&fecha"+fecha);
     ajax.send();
     ajax.onreadystatechange = function(){
         if (ajax.readyState==4 && ajax.status == 200) {

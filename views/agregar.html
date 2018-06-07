@@ -55,10 +55,16 @@
 =======
 >>>>>>> b06dcb8143c4cd0e6ea5c1ef0011bb8139772b55
 
-		<div id="mapa"></div>
 		<div class="ficha">
 			<input type="text" placeholder="Nombre del Lugar" id="nombre"><br>
-			<input type="text" placeholder="¿Qué tipo de lugar es?" id="categoria"><br>
+			<select id="categoria">
+				<option></option>
+				<option>Puntos de interes</option>
+				<option>Artesanias</option>
+				<option>Dulces tipicos</option>
+				<option>Restaurantes</option>	
+				<option>Hospedaje</option>
+			</select>
 			<textarea placeholder="¿Qué hay en este lugar?" id="descripcion"></textarea><br>
 			<textarea placeholder="Comentario" id="comentario"></textarea><br>
 			<input type="number" min="0" max="10" placeholder="Calificacion" id="calificacion"><br>

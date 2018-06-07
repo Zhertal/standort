@@ -1,31 +1,20 @@
 <?php 
+include ('functions.php');
 
-<<<<<<< HEAD
-    $usuario = $_GET['usr'];
-    $correo = $_GET['mail'];
-    $pass = $_GET['pass'];
+$email=$_GET['correo'];
+$pass=$_GET['pass'];
+$nombre=$_GET['usr'];
+$fecha=$_GET['fecha'];
 
-	$conexion = new mysqli('localhost','root','','standort');
+ejecutarSQLCommand("INSERT INTO  `usuario` (correo, password, nombreUsuario, fechaRegistro)
+VALUES (
+'$email',
+'$pass',
+'$nombre',
+'$fecha')
 
-	$sql = "INSERT INTO usuario (correo, password, nombreUsuario) values('$correo','$pass','$usuario')";
-
-	$conexion->query($sql) or die ('error \n'.mysql_error());
-
-=======
-if (isset($_POST['registrarse'])) {
-
-    $usuario = $_POST['usuario'];
-    $correo = $_POST['correo'];
-    $pass = $_POST['pass'];
-        
-    insert($usuario, $correo, $pass);
-}
-
-function insert($u, $co, $c) {
-    $c = md5($c);//Encriptar
-    $query = "INSERT INTO usuario (correo, password, nombreUsuario) values('{$co}','{$c}','{$u}')";
-    $resultado = consulta($query);
-    exit(header("location: ../views/index.html"));
-}
+ ON DUPLICATE KEY UPDATE `correo`= '$email',
+`password`='$pas',
+`nombreUsuario`='$nombre',
+`fechaRegistro`='$fecha';");
  ?>
->>>>>>> b06dcb8143c4cd0e6ea5c1ef0011bb8139772b55

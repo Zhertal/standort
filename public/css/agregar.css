@@ -126,6 +126,15 @@ input{
 	border-radius: 5px;
 	text-align: center;
 }
+select{
+	margin-top: 20px;
+	width: 80%;
+	height: 80px;
+	font-size: 58px;
+	border: none;
+	border-radius: 5px;
+	text-align: center;
+}
 textarea{
 	margin-top: 20px;
 	width: 80%;
