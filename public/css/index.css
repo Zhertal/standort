@@ -1,5 +1,5 @@
 :root{
-	--verde: #badc58;
+	--verde: #6ab04c;
 	--naranja: #ffa502;
 }
 
@@ -52,7 +52,13 @@ nav{
 		width: 90%;
 		height: 400px;
 		background-color: var(--verde);
-		
+		border-radius: 55px;
+	}
+	.cont-izq>img{
+		margin-top: 10%;
+		margin-left: 10%;
+		width: 80%;
+		height: 80%;
 	}
 
 .der{
@@ -67,7 +73,13 @@ nav{
 		width: 90%;
 		height: 400px;
 		background-color: var(--verde);
-		
+		border-radius: 55px;
+	}
+	.cont-der>img{
+		margin-top: 10%;
+		margin-left: 10%;
+		width: 80%;
+		height: 80%;
 	}
 
 h1{
