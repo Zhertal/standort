@@ -1,8 +1,10 @@
 <!DOCTYPE html> 
 <html> 
 <head>
-    <link rel="stylesheet" type="text/css" href="../public/css/registro.css">     
-    <script src="../public/js/registro.js"></script>     
+    <link rel="stylesheet" type="text/css" href="../public/css/registro.css">
+    <link rel="stylesheet" type="text/css" href="../public/css/error.css">    
+    <script src="../public/js/registro.js"></script>
+    <script type="text/javascript" src="../public/js/ajaxErrores.js"></script>
     <title>Standort</title>     
     <meta charset="utf-8"> 
 </head> 
@@ -13,27 +15,27 @@
 
     <div class="formulario">
         <h2>Registro</h2>
-        <form enctype="multipart/form-data" method="POST" action="../php/registro.php" onsubmit="return validar()">
+        <form enctype="multipart/form-data" method="POST" action="../php/registro.php" onsubmit="return validarRegistro(getIdVal('usuario'), getIdVal('correo'), getIdVal('contraseña'))">
             <div>
                 <div>
                     <label>Usuario</label><br>
-                    <input name="usuario" id="usuario" placeholder="Nombre de usuario" type="text"/>
+                    <input name="usuario" id="usuario" placeholder="Nombre de usuario" type="text" required/>
                 </div>
                 <div>
-                    <label class="label">Correo Electrónico</label><br>
-                    <input name="correo" id="correo" placeholder="Ingresa Correo" type="email">
+                    <label>Correo Electrónico</label><br>
+                    <input name="correo" id="correo" placeholder="Ingresa Correo" type="email" required/>
                 </div>
                 <div>
                     <label>Contraseña</label><br>
-                    <input name="pass" id="contraseña" minlength="8" placeholder="Contraseña (8 caracteres mínimo)" type="password"/>
+                    <input name="pass" id="contraseña" minlength="8" placeholder="Contraseña (8 caracteres mínimo)" type="password" required/>
                 </div>
                 <div>
                     <label>Confirmar contraseña</label><br>
-                    <input name="pass2" id="contraseña2" minlength="8" placeholder="Confirma" type="password"/>
+                    <input name="pass2" id="contraseña2" minlength="8" placeholder="Confirma" type="password" required/>
                 </div>
                 <div>
                     <p id="error"></p>
-                    <button type="submit" name="registrarse" value="reg">Registrarte</button><br>
+                    <button type="submit" name="registrarse" value="reg" onclick="registrar()">Registrarte</button><br>
                 </div>
             </div>
         </form>

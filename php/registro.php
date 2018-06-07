@@ -1,38 +1,12 @@
 <?php 
-include 'db.php';
 
-if (isset($_POST['registrarse'])) {
-        if (!isset($_POST['usuario']) || !isset($_POST['correo']) || !isset($_POST['pass']))
-            exit(header("location: ../views/registro.html?e=1"));
-        
-        $usuario = $_POST['usuario'];
-        $correo = $_POST['correo'];
-        $pass = $_POST['pass'];
+    $usuario = $_GET['usr'];
+    $correo = $_GET['mail'];
+    $pass = $_GET['pass'];
 
-        if (!$usuario || !$correo || !$pass)
-            exit(header("location: ../views/registro.html?e=1"));
-        
-        insert($usuario, $correo, $pass);
-    }
+	$conexion = new mysqli('localhost','root','','standort');
 
-function insert($u, $co, $c) {
-    if (userExist($u, $co))
-        exit(header("location: ../views/registro.html?e=2"));
+	$sql = "INSERT INTO usuario (correo, password, nombreUsuario) values('$correo','$pass','$usuario')";
 
-    $c = md5($c);//Encriptar
-    $query = "INSERT INTO usuario (correo, password, nombreUsuario) values('{$co}','{$c}','{$u}')";
-    $resultado = consulta($query);
-    exit(header("location: ../views/index.html"));
-}
+	$conexion->query($sql) or die ('error \n'.mysql_error());
 
-function userExist($u,$co){
-    $query = "SELECT count(*) as existe FROM usuario WHERE nombreUsuario='{$u}' OR correo='{$co}'";
-    $res = consulta($query);
-    while ($row = $res->fetch_assoc())
-        $val = $row['existe'];
-    if($val>0)
-        return True;
-    else
-        return False;
-}
- ?>

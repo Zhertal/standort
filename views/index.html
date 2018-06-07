@@ -2,7 +2,10 @@
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="../public/css/login.css">
+    <link rel="stylesheet" type="text/css" href="../public/css/error.css">    
     <script type="text/javascript" src="../public/js/registro.js"></script>
+    <script type="text/javascript" src="../public/js/ajaxErrores.js">
+    </script>
 	<title>Standort</title>
     <meta charset="utf-8">
 </head>
@@ -16,20 +19,20 @@
     </nav>
 
     <div class="formulario">
-        <form method="POST" action="../php/login.php">
+        <form method="POST" action="../php/login.php" onsubmit="return validarLogin(document.getElementById('usuario').value, document.getElementById('password').value)">
         <h2>Por favor logueate para acceder</h2><br><br>
         <div>
             <label>Nombre de Usuario o correo</label><br>
-            <div><input name="usuario" type="text" placeholder="Usuario" autofocus="" required></div>
+            <div><input id="usuario" name="usuario" type="text" placeholder="Usuario" autofocus="" required></div>
         </div>
 
         <div>
             <label>Contraseña</label><br>
-            <div><input name="pass" type="password" placeholder="Contraseña" required></div>
+            <div><input id="password" name="pass" type="password" placeholder="Contraseña" required></div>
         </div>
 
-        <div><button type="submit" name="bandera" value="entrar">Entrar</button></div><br>
         <p id="error"></p>
+        <div><button type="submit" name="bandera" value="entrar" onclick="iniciaSesion()">Entrar</button></div><br>
     </form>
     <div>
         <p><a href="registro.html">Registrarte</a></p>

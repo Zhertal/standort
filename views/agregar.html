@@ -19,14 +19,15 @@
 	</nav>
 
 	<div class="contenedor">
+
 		<div id="mapa"></div>
 
 		<div class="ficha">
 			<input type="text" placeholder="Nombre del Lugar" id="nombre"><br>
 			<input type="text" placeholder="¿Qué tipo de lugar es?" id="categoria"><br>
 			<textarea placeholder="¿Qué hay en este lugar?" id="descripcion"></textarea><br>
-			<textarea placeholder="Comentario" id="descripcion"></textarea><br>
-			<input type="number" min="0" max="10" placeholder="Calificacion"><br>
+			<textarea placeholder="Comentario" id="comentario"></textarea><br>
+			<input type="number" min="0" max="10" placeholder="Calificacion" id="calificacion"><br>
 			<button onclick="guardarLugar()">Agregar</button>
 		</div>
 		
@@ -36,7 +37,7 @@
 <script>
 
       function initMap() {
-        var miLugar = {lat: latitud, lng: longitud};
+        var miLugar = {'lat': latitud, 'lng': longitud};
         var miMapa = new google.maps.Map(document.getElementById('mapa'), {
           zoom: 18,
           streetViewControl:false,
@@ -55,6 +56,6 @@
     </script>
 
 	<script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyArqHLwJ2VwkSeW7y9RxS0pyf_5ICuaGmM">
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAWipZBYI_as9dXkwMFzCA9QDFJif-IoRw&callback=initMap">
     </script>
 </html>
