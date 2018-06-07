@@ -29,27 +29,15 @@ $mysqli->close();
 }
 
 function getSQLResultSet($commando){
- 
- 
   $mysqli = new mysqli("localhost", "root", "vpcek20al", "androidsitio");
-/* check connection */
-if ($mysqli->connect_errno) {
+  /* check connection */
+  if ($mysqli->connect_errno) {
     printf("Connect failed: %s\n", $mysqli->connect_error);
     exit();
+  }
+  if ( $mysqli->multi_query($commando)) {
+	 return $mysqli->store_result();   
+  }
+  $mysqli->close();
 }
-
-if ( $mysqli->multi_query($commando)) {
-	return $mysqli->store_result();
-	
-     
-    
-   
-}
-
-
-
-$mysqli->close();
-}
-
-
 ?>

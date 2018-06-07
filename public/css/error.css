@@ -1,0 +1,15 @@
+#error{
+	visibility: hidden;
+	transition: .3s all;
+	color: red;
+	font-weight: bolder;
+	font-size: 3em;
+}
+#error.is-active{
+	transition: .3s all;
+	visibility: visible;
+}
+.is-danger{
+	border: solid 2px;
+	border-color: red;
+}
