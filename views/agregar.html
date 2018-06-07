@@ -5,6 +5,36 @@
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="../public/css/agregar.css">
 	<script src="../public/js/agregar.js"></script>
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCv6Pk_K6UZzE8AkJRsan-flQulHnSz6KY&callback=initMap"></script>
+	<script type="text/javascript">
+		function initMap(){
+	        navigator.geolocation.getCurrentPosition(
+		        function (position){
+		            coords =  {
+		            	lng: position.coords.longitude,
+		            	lat: position.coords.latitude
+		            };
+		            setMapa(coords);
+		        });
+		}
+
+		function setMapa (coords){
+		    var miMapa = new google.maps.Map(document.getElementById('mapa'),{
+		        zoom: 18,
+			    fullscreenControl: false,
+			    mapTypeControl: false,
+			    zoomControl:false,
+		        center:new google.maps.LatLng(coords.lat,coords.lng)
+		    });
+
+		    var miMarcador = new google.maps.Marker({
+			  position: new google.maps.LatLng(coords.lat,coords.lng),
+			  draggable: true,
+			  animation: google.maps.Animation.DROP,
+			  map: miMapa
+			});
+		}
+	</script>
 </head>
 <body>
 
@@ -21,7 +51,6 @@
 	<div class="contenedor">
 
 		<div id="mapa"></div>
-
 		<div class="ficha">
 			<input type="text" placeholder="Nombre del Lugar" id="nombre"><br>
 			<input type="text" placeholder="¿Qué tipo de lugar es?" id="categoria"><br>
@@ -29,32 +58,7 @@
 			<textarea placeholder="Comentario" id="comentario"></textarea><br>
 			<input type="number" min="0" max="10" placeholder="Calificacion" id="calificacion"><br>
 			<button onclick="guardarLugar()">Agregar</button>
-		</div>
-		
+		</div>	
 	</div>
-
 </body>
-<script>
-
-      function initMap() {
-        var miLugar = {lat: latitud, lng: longitud};
-        var miMapa = new google.maps.Map(document.getElementById('mapa'), {
-          zoom: 18,
-          fullscreenControl: false,
-          mapTypeControl: false,
-          zoomControl:false,
-          center: miLugar
-        });
-        var miMarcador = new google.maps.Marker({
-          position: miLugar,
-          draggable: true,
-          animation: google.maps.Animation.DROP,
-          map: miMapa
-        });
-      }
-    </script>
-
-	<script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCv6Pk_K6UZzE8AkJRsan-flQulHnSz6KY">
-    </script>
 </html>
