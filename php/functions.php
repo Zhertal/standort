@@ -4,7 +4,7 @@ header( 'Content-Type: text/html;charset=utf-8' );
 
 function ejecutarSQLCommand($commando){
  
-  $mysqli = new mysqli("localhost", "root", "vpcek20al", "standort");
+  $mysqli = new mysqli("localhost", "root", "", "standort");
 
 /* check connection */
 if ($mysqli->connect_errno) {

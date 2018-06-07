@@ -1,20 +1,19 @@
 <?php 
 include ('functions.php');
 
-$email=$_GET['correo'];
-$pass=$_GET['pass'];
-$nombre=$_GET['usr'];
-$fecha=$_GET['fecha'];
+$email=$_POST['correo'];
+$pass=$_POST['pass'];
+$nombre=$_POST['usuario'];
 
-ejecutarSQLCommand("INSERT INTO  `usuario` (correo, password, nombreUsuario, fechaRegistro)
+ejecutarSQLCommand("INSERT INTO  `usuario` (correo, password, nombreUsuario)
 VALUES (
 '$email',
 '$pass',
-'$nombre',
-'$fecha')
+'$nombre')
 
  ON DUPLICATE KEY UPDATE `correo`= '$email',
-`password`='$pas',
-`nombreUsuario`='$nombre',
-`fechaRegistro`='$fecha';");
+`password`='$pass',
+`nombreUsuario`='$nombre';");
+
+header('location: ../views/index.html')
  ?>

@@ -57,7 +57,7 @@ function registrar(){
     var fecha = Date.now();
 
     ajax = new XMLHttpRequest();
-    ajax.open('GET', 'http://localhost/standort/php/registro.php?usr='+usr+"&correo="+mail+"$pass="+contra+"&fecha"+fecha);
+    ajax.open('GET', 'http://localhost/standort/php/registro.php?usr='+usr+"&correo="+mail+"&pass="+contra+"&fecha="+fecha);
     ajax.send();
     ajax.onreadystatechange = function(){
         if (ajax.readyState==4 && ajax.status == 200) {
