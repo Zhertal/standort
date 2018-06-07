@@ -23,7 +23,6 @@ if($resultset = getSQLResultSet($query)){
 		echo json_encode($row);
 	}
 }
-
 ?>
 
 

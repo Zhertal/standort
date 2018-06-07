@@ -1,17 +1,9 @@
 <?php 
 include('db.php');
 
-//Logout
-if (isset($_GET['s']))
-	if($_GET['s'] == 1) {
-		session_start();
-		session_destroy();
-		exit(header("location: ../views/index.html"));	
-	}
-
 //Salir si no hay POST
 if(!$_POST)
-	exit(header("location: registro.html"));
+	exit(header("location: ../views/registro.html"));
 
 $usuario = $_POST['usuario'];
 $pass = $_POST['pass'];
