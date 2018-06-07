@@ -1,6 +1,23 @@
 <?php 
 
 include ('functions.php');
+$funcion = $_GET["func"];
+
+if($funcion=="1"){
+  insertUser();
+}
+elseif($function=="2") {
+	insertSitio();
+}
+elseif ($funcion=="3") {
+	insertComentario();
+}
+elseif ($funcion=="4") {
+	insertCategoria();
+}
+elseif ($function=="5") {
+	insertSitioCat();
+}
 
 function insertUser(){
 $email=$_GET['correo'];
@@ -14,11 +31,11 @@ VALUES (
 '$email',
 '$pass',
 '$nombre',
-'$Ponderacion',
+'$kudos',
 '$fecha')
 
  ON DUPLICATE KEY UPDATE `correo`= '$email',
-`password`='$pas',
+`password`='$pass',
 `nombreUsuario`='$nombre',
 `kudos`='$kudos',
 `fechaRegistro`='$fecha';");
@@ -77,7 +94,7 @@ VALUES (
 
 
 
-function insertCategoria{
+function insertCategoria(){
 $cat=$_GET['categoria'];
 
 

@@ -6,16 +6,16 @@ $id=$_GET["id"];
 $consulta=$_GET["consult"];
 $query = "";
 
-if($consulta="categoria"){
+if($consulta=="categoria"){
 	$query = "SELECT * FROM `idCategoria` WHERE id='$id'";
-}elseif ($consulta="comentarios") {
+}elseif ($consulta=="comentarios") {
 	$query = "SELECT * FROM `idComentario` WHERE id='$id'";
-}elseif ($consulta="sitio") {
+}elseif ($consulta=="sitio") {
 	$query = "SELECT * FROM `idSitio` WHERE id='$id'";
-}elseif ($consulta="sitiocategoria") {
+}elseif ($consulta=="sitiocategoria") {
 	$query = "SELECT * FROM `idSitioCategoria` WHERE id='$id'";
-}elseif ($consulta="usuario") {
-	$query = "SELECT * FROM `idUsuario` WHERE id='$id'";
+}elseif ($consulta=="usuario") {
+	$query = "SELECT * FROM `usuario` WHERE idUsuario='$id'";
 }
 
 if($resultset = getSQLResultSet($query)){

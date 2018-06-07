@@ -4,7 +4,7 @@ header( 'Content-Type: text/html;charset=utf-8' );
 
 function ejecutarSQLCommand($commando){
  
-  $mysqli = new mysqli("localhost", "root", "vpcek20al", "androidsitio");
+  $mysqli = new mysqli("localhost", "root", "vpcek20al", "standort");
 
 /* check connection */
 if ($mysqli->connect_errno) {
@@ -29,7 +29,7 @@ $mysqli->close();
 }
 
 function getSQLResultSet($commando){
-  $mysqli = new mysqli("localhost", "root", "vpcek20al", "androidsitio");
+  $mysqli = new mysqli("localhost", "root", "vpcek20al", "standort");
   /* check connection */
   if ($mysqli->connect_errno) {
     printf("Connect failed: %s\n", $mysqli->connect_error);
